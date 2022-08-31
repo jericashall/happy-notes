@@ -12,7 +12,11 @@ const TodoSchema = new mongoose.Schema({
   userId: {
     type: String,
     required: true
-  }
+  },
+  date:{//will generate the time and date @ the time a note is created. 
+    type: Date,
+    default: Date.now
+  },
 })
 
 module.exports = mongoose.model('Todo', TodoSchema)
